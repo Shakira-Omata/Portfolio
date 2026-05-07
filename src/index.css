@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #102830;
+  --color-light: #AFF9C7;
+  --color-soft: #EDFFF8;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased text-gray-800 bg-gray-50;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom AOS Overrides */
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
