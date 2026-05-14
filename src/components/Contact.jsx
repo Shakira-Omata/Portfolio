@@ -28,62 +28,62 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section py-24 bg-dark text-white" data-aos="zoom-out-up">
+    <section id="contact" className="section py-24 bg-transparent text-foreground" data-aos="zoom-out-up">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-light mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
+          <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
             Have a project in mind or want to discuss opportunities? Send me a message and I'll get back to you!
           </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white/5 p-8 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
+          <form onSubmit={handleSubmit} className="space-y-6 neon-card-soft p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="block text-sm font-bold uppercase tracking-widest text-gray-400">Name</label>
+                <label htmlFor="name" className="block text-sm font-bold uppercase tracking-widest text-muted">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  className="w-full px-5 py-4 bg-dark/50 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-light/50 focus:border-transparent transition-all"
+                  className="w-full px-5 py-4 bg-bg2/50 border border-foreground/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all"
                   placeholder="Shakira Omata"
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-bold uppercase tracking-widest text-gray-400">Email</label>
+                <label htmlFor="email" className="block text-sm font-bold uppercase tracking-widest text-muted">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
-                  className="w-full px-5 py-4 bg-dark/50 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-light/50 focus:border-transparent transition-all"
+                  className="w-full px-5 py-4 bg-bg2/50 border border-foreground/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all"
                   placeholder="hello@example.com"
                 />
               </div>
             </div>
             
             <div className="space-y-2">
-              <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-widest text-gray-400">Subject</label>
+              <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-widest text-muted">Subject</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-5 py-4 bg-dark/50 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-light/50 focus:border-transparent transition-all"
+                className="w-full px-5 py-4 bg-bg2/50 border border-foreground/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all"
                 placeholder="Collaboration Inquiry"
               />
             </div>
             
             <div className="space-y-2">
-              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-widest text-gray-400">Message</label>
+              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-widest text-muted">Message</label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
                 required
-                className="w-full px-5 py-4 bg-dark/50 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-light/50 focus:border-transparent transition-all resize-none"
+                className="w-full px-5 py-4 bg-bg2/50 border border-foreground/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-transparent transition-all resize-none"
                 placeholder="Hi Shakira, I'd love to chat about..."
               ></textarea>
             </div>
@@ -91,7 +91,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full bg-light hover:bg-[#8ee8ae] text-dark font-extrabold py-5 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-accent hover:bg-teal text-bg font-extrabold py-5 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? (
                 <>
@@ -107,14 +107,14 @@ const Contact = () => {
             </button>
 
             {status === 'success' && (
-              <div className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-200 flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+              <div className="mt-4 p-4 bg-accent/20 border border-accent/50 rounded-xl text-accent flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
                 <CheckCircle className="size-5" />
                 <span>Success! Your message has been sent.</span>
               </div>
             )}
             
             {status === 'error' && (
-              <div className="mt-4 p-4 bg-red-400/20 border border-red-400/50 rounded-xl text-red-200 flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+              <div className="mt-4 p-4 bg-bg3/80 border border-accent/50 rounded-xl text-foreground flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
                 <AlertCircle className="size-5" />
                 <span>Error! Something went wrong. Please try again.</span>
               </div>

@@ -67,12 +67,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="section py-20 bg-light text-gray-900">
+    <section id="portfolio" className="section py-20 bg-transparent text-foreground">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">My Work</h2>
-          <div className="w-20 h-1 bg-dark mx-auto mb-6"></div>
-          <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
+          <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
             Check out some of my recent projects and accomplishments.
           </p>
         </div>
@@ -81,22 +81,22 @@ const Portfolio = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group portfolio-item bg-soft rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-dark/5"
+              className="group portfolio-item neon-card overflow-hidden transition-all duration-500"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
-              <div className={`portfolio-image relative overflow-hidden h-32 ${project.contain ? 'bg-white/30 p-2' : ''}`}>
+              <div className={`portfolio-image relative overflow-hidden h-32 ${project.contain ? 'bg-foreground/20 p-2' : ''}`}>
                 <img
                   src={project.image}
                   alt={project.title}
                   className={`w-full h-full ${project.contain ? 'object-contain' : 'object-cover'} transition-transform duration-700 group-hover:scale-110`}
                 />
-                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-dark p-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                    className="bg-foreground text-bg p-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
                   >
                     {project.type === 'github' ? <Github className="size-5" /> : <ExternalLink className="size-5" />}
                   </a>
@@ -104,15 +104,15 @@ const Portfolio = () => {
               </div>
 
               <div className="p-5">
-                <h3 className="text-sm font-extrabold mb-2 group-hover:text-dark transition-colors">{project.title}</h3>
-                <p className="text-gray-600 text-[11px] mb-4 leading-relaxed">
+                <h3 className="text-sm font-extrabold mb-2 text-foreground group-hover:text-accent transition-colors">{project.title}</h3>
+                <p className="text-muted text-[11px] mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-bold text-dark text-xs border-b border-transparent hover:border-dark transition-all"
+                  className="inline-flex items-center gap-1.5 font-bold text-accent text-xs border-b border-transparent hover:border-accent transition-all"
                 >
                   Visit Project
                   <ExternalLink className="size-3" />

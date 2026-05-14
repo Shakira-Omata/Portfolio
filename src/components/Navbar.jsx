@@ -12,10 +12,10 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-dark shadow-sm sticky top-0 z-50">
+    <header className="bg-bg2 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold text-white tracking-wider">
+          <div className="text-xl font-bold text-foreground tracking-wider">
             SHAKIRA OMATA
           </div>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white hover:text-light transition-colors duration-200 font-medium"
+                    className="text-foreground hover:text-accent transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </a>
@@ -38,7 +38,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-foreground focus:outline-none"
           >
             {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block py-3 px-4 text-white hover:bg-white/10 rounded transition-colors"
+                  className="block py-3 px-4 text-foreground hover:bg-bg3 rounded transition-colors"
                 >
                   {link.name}
                 </a>

@@ -7,9 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#102830",
-        light: "#AFF9C7",
-        soft: "#EDFFF8",
+        jscolors: {
+          bg: '#090d0b',
+          bg2: '#101710',
+          bg3: '#162016',
+          accent: '#c8f04a',
+          teal: '#6dd4a8',
+          foreground: '#e5ede7',
+          muted: '#6d8c76',
+        },
+        bg: '#090d0b',
+        bg2: '#101710',
+        bg3: '#162016',
+        accent: '#c8f04a',
+        teal: '#6dd4a8',
+        foreground: '#e5ede7',
+        muted: '#6d8c76',
       },
     },
   },
