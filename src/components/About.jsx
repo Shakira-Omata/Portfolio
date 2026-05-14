@@ -82,11 +82,14 @@ const About = () => {
             </div>
             <div className="flex flex-wrap gap-2 text-[15px]">
               {[
-                'MS Office (Word, Excel, PowerPoint)',
-                'Google Workspace (Docs, Sheets, Slides)',
-                'Asana, Slack, Zoom',
-                'VS Code, GitHub, Figma',
-                'Canva, WordPress'
+                  'Google Workspace',
+                      'MS Office ',
+                      'VS Code, GitHub, Figma',
+                      'Netlify, npm, Chrome DevTools',
+                      'Tailwind CSS, WordPress, Canva',
+                      'Asana, Notion, Slack',
+                      'Zoom, Google Meet, Calendly',
+                      'Google Forms, Grammarly,'
               ].map((tool, i) => (
                 <span key={i} className="px-3 py-1 bg-foreground/10 text-foreground rounded-full font-medium">
                   {tool}

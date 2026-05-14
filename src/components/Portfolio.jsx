@@ -49,7 +49,7 @@ const Portfolio = () => {
     },
     {
       title: 'Golden Heart',
-      description: 'A community charity organization.',
+      description: 'A community charity organization, built with care for a cause that cares for others',
       image: goldenHeartImg,
       tags: ['Advocacy', 'Project Management'],
       link: 'https://ghm-flax.vercel.app/',
