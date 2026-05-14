@@ -55,7 +55,7 @@ const About = () => {
               I come from a unique blend of experiences; clerical work, paralegal support, reproductive justice advocacy, and project management - that have shaped my voice, my values, and the kind of digital work I want to put into the world.
             </p>
             <p>
-              I channel that into code. I build thoughtful products using JavaScript, React, and UX design principles, and I care deeply about making those products accessible, especially in spaces where they're needed most. My most personal project is SalamaHub, a platform giving Kenyan youth judgment-free access to SRHR information.
+              I channel that into code. I build thoughtful products using JavaScript, React, and UX design principles, and I care deeply about making those products accessible, especially in spaces where they're needed most. My most personal project is <a href="https://salamaprot.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline decoration-2 underline-offset-4 transition-all">SalamaHub</a>, a platform giving Kenyan youth judgment-free access to SRHR information.
             </p>
             <p>
               Beyond the screen, you'll find me behind a camera lens or in the kitchen. Both places where I slow down, stay present, and express something that doesn't fit neatly into a pull request.
