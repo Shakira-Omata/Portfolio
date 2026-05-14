@@ -3,7 +3,7 @@ import heroImg from '../assets/hero.jpeg';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero bg-bg py-20 px-4" data-aos="zoom-out-up">
+    <section id="home" className="hero bg-bg pt-32 pb-20 px-4 scroll-mt-24" data-aos="zoom-out-up">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="hero-text md:w-1/2 text-center md:text-left">

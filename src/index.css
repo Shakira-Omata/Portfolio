@@ -5,6 +5,10 @@
   --color-dark: #102830;
   --color-light: #AFF9C7;
   --color-soft: #EDFFF8;
+  --color-bg: #090d0b;
+  --color-bg2: #101710;
+  --color-bg3: #162016;
+  --color-accent: #c8f04a;
 }
 
 :root {

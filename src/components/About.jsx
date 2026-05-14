@@ -25,8 +25,26 @@ const About = () => {
     },
   ];
 
+  const toolkit = [
+    {
+      category: 'Development & Design',
+      icon: <Code className="size-6 text-accent" />,
+      tools: ['VS Code', 'GitHub', 'Figma', 'Tailwind CSS', 'Netlify', 'npm', 'WordPress', 'Canva', 'Chrome DevTools']
+    },
+    {
+      category: 'Productivity & Office',
+      icon: <Briefcase className="size-6 text-accent" />,
+      tools: ['Google Workspace', 'MS Office', 'Google Forms', 'Grammarly']
+    },
+    {
+      category: 'Management & Collab',
+      icon: <Terminal className="size-6 text-accent" />,
+      tools: ['Asana', 'Notion', 'Slack', 'Zoom', 'Google Meet', 'Calendly']
+    }
+  ];
+
   return (
-    <section id="about" className="section py-24 bg-transparent text-foreground">
+    <section id="about" className="section py-24 bg-transparent text-foreground scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
@@ -71,29 +89,31 @@ const About = () => {
             ))}
           </div>
 
-          <div
-            className="mt-8 neon-card p-6 text-foreground"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <Wrench className="size-6 text-accent" />
-              <h4 className="font-bold text-base uppercase tracking-tight text-foreground">Powerful Toolkit</h4>
-            </div>
-            <div className="flex flex-wrap gap-2 text-[15px]">
-              {[
-                  'Google Workspace',
-                      'MS Office ',
-                      'VS Code, GitHub, Figma',
-                      'Netlify, npm, Chrome DevTools',
-                      'Tailwind CSS, WordPress, Canva',
-                      'Asana, Notion, Slack',
-                      'Zoom, Google Meet, Calendly',
-                      'Google Forms, Grammarly,'
-              ].map((tool, i) => (
-                <span key={i} className="px-3 py-1 bg-foreground/10 text-foreground rounded-full font-medium">
-                  {tool}
-                </span>
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-10 text-accent text-center" data-aos="fade-up">Powerful Toolkit</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {toolkit.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="neon-card p-6 text-foreground hover:-translate-y-1 flex flex-col"
+                  data-aos="fade-up"
+                  data-aos-delay={idx * 100}
+                >
+                  <div className="flex items-center gap-3 mb-6">
+                    {item.icon}
+                    <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">{item.category}</h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tools.map((tool, i) => (
+                      <span 
+                        key={i} 
+                        className="px-3 py-1.5 bg-foreground/5 border border-foreground/10 text-muted rounded-xl text-xs font-semibold hover:bg-accent/10 hover:border-accent/20 hover:text-accent transition-all duration-300"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

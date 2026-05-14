@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-bg2 shadow-sm sticky top-0 z-50">
+    <header className="bg-[#090d0b] border-b border-white/10 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
@@ -48,9 +48,8 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? 'max-height-[500px] py-4' : 'max-h-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-height-[500px] py-4' : 'max-h-0'
+            }`}
         >
           <ul className="space-y-2">
             {navLinks.map((link) => (
