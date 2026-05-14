@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
+import logo from '../assets/SOdev.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,11 +9,8 @@ const Footer = () => {
     <footer className="bg-transparent text-foreground py-16" data-aos="fade-right">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-black uppercase tracking-tighter">Shakira Omata</h3>
-            <p className="text-muted leading-relaxed font-medium">
-             Interested in working together? We should queue up a time to chat. I’ll buy the coffee.
-            </p>
+          <div className="flex items-center justify-center min-h-[320px]">
+            <img src={logo} alt="SOdev logo" className="max-h-[280px] w-full object-contain" />
           </div>
           <div className="space-y-4">
             <h3 className="text-xl font-bold uppercase">Quick Links</h3>

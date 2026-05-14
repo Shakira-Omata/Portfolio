@@ -34,7 +34,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
           <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-            Have a project in mind or want to discuss opportunities? Send me a message and I'll get back to you!
+            Interested in working together? We should queue up a time to chat. I’ll buy the coffee.
           </p>
         </div>
 
@@ -88,23 +88,25 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full bg-accent hover:bg-teal text-bg font-extrabold py-5 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {status === 'loading' ? (
-                <>
-                  <Loader2 className="size-5 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                <>
-                  <Send className="size-5" />
-                  Send Message
-                </>
-              )}
-            </button>
+            <div className="text-center">
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="accent-btn text-black font-extrabold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg inline-flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 className="size-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="size-5" />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </div>
 
             {status === 'success' && (
               <div className="mt-4 p-4 bg-accent/20 border border-accent/50 rounded-xl text-accent flex items-center gap-3 animate-in fade-in slide-in-from-top-2">

@@ -8,18 +8,20 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="hero-text md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold text-foreground mb-6 leading-tight">
-              Hi, I'm Shakira Omata
+              Hi, I'm <span className="hero-name">Shakira <span className="hero-lastname">Omata</span></span>
             </h1>
-            <p className="text-xl text-muted mb-10 leading-relaxed font-medium">
-              Developer · Advocate · VA
+            <br />  
+            <p className="text-xl mb-10 leading-relaxed font-medium">
+              <span className="hero-roleline">Developer · Advocate · VA</span>
+              <br />
               <br />
               <span className="text-foreground font-bold mt-2 inline-block">
-                Bridging clerical efficiency, front-end craft, and reproductive justice — one project at a time.
+                Bridging clerical efficiency, front-end craft, and reproductive justice. One project at a time.
               </span>
             </p>
             <a
               href="#contact"
-              className="bg-accent hover:bg-bg3 text-bg px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+              className="accent-btn text-black text-bg px-8 py-4 rounded-full font-bold transform hover:scale-105 shadow-lg inline-block"
             >
               Get In Touch
             </a>
